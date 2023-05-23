@@ -1,5 +1,6 @@
+import 'reflect-metadata';
 import 'dotenv/config';
-// import '@shared/containers';
+import '@shared/containers';
 // import '@modules/<modulename>/containers';
 
 import bodyParser from 'body-parser';

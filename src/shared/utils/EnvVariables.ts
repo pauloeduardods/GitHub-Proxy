@@ -13,8 +13,15 @@ export default class EnvVariables {
     return { key: apiKey };
   }
 
+  static getGithubToken() {
+    const githubToken = env.GH_TOKEN;
+    if (!githubToken) throw new Error('Env variable GH_TOKEN not found.');
+    return { token: githubToken };
+  }
+
   static checkEnvVariables() {
     this.getServerPort();
     this.getApiKey();
+    this.getGithubToken();
   }
 }

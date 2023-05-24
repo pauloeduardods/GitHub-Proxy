@@ -12,7 +12,6 @@ export default class GetDetailsUseCase implements IGetDetailsUseCase {
 
   async run(params: IGetDetailsUseCaseParams) {
     const { username } = params;
-    console.log(username);
     GitHubUtils.isValidGithubAEUsername(username);
     const users = await this.gitHubService.getUser(username);
     return users;

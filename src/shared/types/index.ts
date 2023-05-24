@@ -15,3 +15,8 @@ export interface GitHubRepo {
   // ...
   [key: string]: any;
 }
+
+export interface IListUseCaseResponse {
+  data: IGitHubUser[];
+  nextLink: string;
+}

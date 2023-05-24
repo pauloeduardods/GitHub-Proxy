@@ -14,9 +14,29 @@ export default class GitHubService implements IGitHubService {
     },
   });
 
-  async listUsers() {
-    const response = await this.github.get('/users');
-    return response.data;
+  private parseLinkHeaderForNext(linkHeader: string): string | null {
+    if (!linkHeader) return null;
+
+    const links = linkHeader.split(',').map((link: string) => {
+      const [url, rel] = link.split(';');
+      const cleanUrl = url.replace(/<|>/g, '').trim();
+      const cleanRel = rel.replace(/rel="|"/g, '').trim();
+
+      return { [cleanRel]: cleanUrl };
+    });
+
+    const nextLink = links.find((link) => link.hasOwnProperty('next'));
+    return nextLink ? nextLink['next'] : null;
+  }
+
+  async listUsers(since = 0) {
+    const response = await this.github.get('/users', { params: { since } });
+    const nextLink = this.parseLinkHeaderForNext(response.headers.link);
+
+    return {
+      data: response.data,
+      nextLink,
+    };
   }
 
   async getUser(username: string) {

@@ -9,8 +9,8 @@ export default class ListUseCase implements IListUseCase {
     private gitHubService: IGitHubService,
   ) {}
 
-  async run() {
-    const users = await this.gitHubService.listUsers();
+  async run(since?: number) {
+    const users = await this.gitHubService.listUsers(since);
     return users;
   }
 }

@@ -1,5 +1,5 @@
-import { IGitHubUser } from '@shared/types';
+import { IListUseCaseResponse } from '@shared/types';
 
 export interface IListUseCase {
-  run(): Promise<IGitHubUser[]>;
+  run(since?: number): Promise<IListUseCaseResponse>;
 }

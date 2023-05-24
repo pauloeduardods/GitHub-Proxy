@@ -1,7 +1,7 @@
 import 'reflect-metadata';
 import 'dotenv/config';
 import '@shared/containers';
-// import '@modules/<modulename>/containers';
+import '@modules/Users/containers';
 
 import bodyParser from 'body-parser';
 import cors from 'cors';
@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(MorganMiddleware);
 
-app.use('/', Routes);
+app.use('/api', Routes);
 app.use('/', PagesRoutes);
 
 app.use(ErrorHandler);

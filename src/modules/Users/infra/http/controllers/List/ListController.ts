@@ -8,10 +8,11 @@ export default class ListController {
 
   public async handle(req: Request, res: Response, next: NextFunction) {
     const { since } = req.query;
-    //TODO: since is not being used
-    try {
-      const result = await this.listUseCase.run();
 
+    try {
+      const result = await this.listUseCase.run(since);
+
+      res.setHeader('X-Total-Count', result.data.length);
       return res.status(200).json(result);
     } catch (error) {
       next(error);

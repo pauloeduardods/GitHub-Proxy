@@ -13,6 +13,7 @@ export default class ListUserReposController {
     try {
       const result = await this.listUserReposUseCase.run({ username });
 
+      res.setHeader('X-Total-Count', result.length);
       return res.status(200).json(result);
     } catch (error) {
       next(error);

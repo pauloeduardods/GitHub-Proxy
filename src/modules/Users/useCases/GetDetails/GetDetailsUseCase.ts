@@ -1,7 +1,7 @@
 import { inject, injectable } from 'tsyringe';
-import { IGitHubService } from '@shared/service';
+import { IGitHubService } from '../../../../shared/service';
 import { IGetDetailsUseCase, IGetDetailsUseCaseParams } from './IGetDetailsUseCase';
-import GitHubUtils from '@shared/utils/Github';
+import GitHubUtils from '../../../../shared/utils/Github';
 
 @injectable()
 export default class GetDetailsUseCase implements IGetDetailsUseCase {

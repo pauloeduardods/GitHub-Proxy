@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 
-import { ApiError } from '@shared/utils';
-import Logger from '@shared/utils/Logger';
+import { ApiError } from '../../../../shared/utils';
+import Logger from '../../../../shared/utils/Logger';
 
 type HandledError = ApiError | Error;
 
@@ -20,7 +20,7 @@ const errorHandler = (err: HandledError, _req: Request, res: Response, _next: Ne
   }
 
   return res.status(500).json({
-    message: isDev || isLocal ? err.message : 'Something went wrong',
+    message: isDev || isLocal ? err.message : err.message,
   });
 };
 

@@ -12,7 +12,7 @@ export default class ListController {
     try {
       const result = await this.listUseCase.run(since);
 
-      res.setHeader('X-Total-Count', result.data.length);
+      res.setHeader('X-Total-Count', result.data.length ?? 0);
       return res.status(200).json(result);
     } catch (error) {
       next(error);

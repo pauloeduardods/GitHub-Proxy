@@ -1,5 +1,5 @@
 import { inject, injectable } from 'tsyringe';
-import { IGitHubService } from '@shared/service';
+import { IGitHubService } from '../../../../shared/service';
 import { IListUseCase } from './IListUseCase';
 
 @injectable()

@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import { ApiError, EnvVariables } from '@shared/utils';
+import { ApiError, EnvVariables } from '../../../../shared/utils';
 
 export default class AuthHandler {
   static apiKeyAuth(req: Request, _res: Response, next: NextFunction) {

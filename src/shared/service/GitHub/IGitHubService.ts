@@ -1,4 +1,4 @@
-import { GitHubRepo, IGitHubUser, IListUseCaseResponse } from '@shared/types';
+import { GitHubRepo, IGitHubUser, IListUseCaseResponse } from '../../../shared/types';
 
 export interface IGitHubService {
   listUsers(since?: number): Promise<IListUseCaseResponse>;

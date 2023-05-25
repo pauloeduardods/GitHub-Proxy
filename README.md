@@ -14,7 +14,7 @@ To set up the project, please follow these instructions:
 
 ### Prerequisites
 
-- Node.js (version >= 12.0.0)
+- Node.js (version >= 18.0.0)
 - Yarn (or npm)
 
 ### Installation

@@ -7,7 +7,7 @@ import {
   IGetDetailsUseCase,
   IListUseCase,
   IListUserReposUseCase,
-} from '@modules/Users/useCases';
+} from '../../../modules/Users/useCases';
 
 container.registerSingleton<IListUseCase>('ListUseCase', ListUseCase);
 container.registerSingleton<IGetDetailsUseCase>('GetDetailsUseCase', GetDetailsUseCase);

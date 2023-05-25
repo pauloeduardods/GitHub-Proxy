@@ -59,6 +59,14 @@ yarn start
 
 This will start the server, and the API will be accessible at `http://localhost:<port>/api`.
 
+### Running the Tests
+
+To run the tests, run the following command:
+
+```bash
+yarn test
+```
+
 ## Endpoints
 
 The following endpoints are available:

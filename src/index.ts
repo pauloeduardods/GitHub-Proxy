@@ -8,11 +8,11 @@ import cors from 'cors';
 import express from 'express';
 import helmet from 'helmet';
 
-import PagesRoutes from './shared/infra/http/pages';
-import Routes from './modules';
-import { ErrorHandler, MorganMiddleware } from './shared/infra/http/middleware';
-import Logger from './shared/utils/Logger';
-import { EnvVariables } from './shared/utils';
+import PagesRoutes from '@/shared/infra/http/pages';
+import Routes from '@/modules';
+import { ErrorHandler, MorganMiddleware } from '@/shared/infra/http/middleware';
+import Logger from '@/shared/utils/Logger';
+import { EnvVariables } from '@/shared/utils';
 
 EnvVariables.checkEnvVariables();
 

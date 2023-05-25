@@ -1,7 +1,7 @@
 import 'reflect-metadata';
 import 'dotenv/config';
-import './shared/containers';
-import './modules/Users/containers';
+import '@/shared/containers';
+import '@/modules/Users/containers';
 
 import bodyParser from 'body-parser';
 import cors from 'cors';

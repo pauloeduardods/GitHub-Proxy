@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 
-import { ApiError } from '../../../../shared/utils';
-import Logger from '../../../../shared/utils/Logger';
+import { ApiError } from '@/shared/utils';
+import Logger from '@/shared/utils/Logger';
 
 type HandledError = ApiError | Error;
 

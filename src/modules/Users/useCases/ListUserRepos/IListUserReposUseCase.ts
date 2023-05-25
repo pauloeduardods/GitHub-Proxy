@@ -1,4 +1,4 @@
-import { GitHubRepo } from '../../../../shared/types';
+import { GitHubRepo } from '@/shared/types';
 
 export interface IListUserReposUseCaseParams {
   username: string;

@@ -1,4 +1,4 @@
-import { IGitHubUser } from '../../../../shared/types';
+import { IGitHubUser } from '@/shared/types';
 
 export interface IGetDetailsUseCaseParams {
   username: string;

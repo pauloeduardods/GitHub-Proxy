@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { container } from 'tsyringe';
-import { AuthHandler, JoiValidator } from '../../../../../shared/infra/http/middleware';
+import { AuthHandler, JoiValidator } from '@/shared/infra/http/middleware';
 import { GetDetailsController, ListController, ListUserReposController } from '../controllers';
 import * as Schemas from '../schemas';
 

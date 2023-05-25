@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import * as Joi from 'joi';
 
-import { ApiError } from '../../../../shared/utils';
+import { ApiError } from '@/shared/utils';
 
 export const run = (schema: Joi.Schema) => {
   return (req: Request, _res: Response, next: NextFunction) => {
